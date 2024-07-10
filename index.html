@@ -1,1 +1,67 @@
-fuck
+<style>
+.parent {
+  position: relative;
+  background-color: #000;
+  width: 600px;
+  height: 150px;
+left; 100px;
+}
+
+@keyframes msgSuccess {
+  50%  {opacity: 1;}
+  99% {opacity: 0;}
+  100% {opacity: 0; display: none; }
+}
+
+.child {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: #ccc;
+  animation-name: msgSuccess;
+  animation-duration: 3s;
+  opacity: 0;
+}
+
+#child {
+  position: relative;
+  width: 100%;
+  height: 110px;
+  background-color: #ccc;
+  animation-name: msgSuccess;
+  animation-duration: 2s;
+  opacity: 0;
+}
+.d-none {
+  display: none;
+}
+
+</style>
+
+
+
+<div id="parent" class="parent">
+  <div id="child" class="child d-none">bang</div>
+<div id="child" class="child d-none">bang</div>
+<div class="child" class="child d-none">bang</div>
+</div>
+<button onclick="showMessage()"><img id=gun src="https://www.pngall.com/wp-content/uploads/13/Gun-PNG-Photos.png"></button>
+
+
+
+
+
+<script>
+function showA() {
+  let message = document.getElementById('child');
+  
+  if(message.classList.contains('d-none')){
+    message.classList.remove('d-none');
+  }
+
+  // message.classList.add('d-none');
+  message.style.animation = 'none';
+  message.offsetHeight;
+  message.style.animation = null;
+}
+</script>
